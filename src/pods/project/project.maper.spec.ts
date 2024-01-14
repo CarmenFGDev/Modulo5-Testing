@@ -12,7 +12,8 @@ describe('./pods/project/project.mappers', () => {
     // Assert
     expect(result).toEqual(viewModel.createEmptyProject());
   });
-   it('should return empty project when feeding undefined value', () => {
+  
+  it('should return empty project when feeding undefined value', () => {
     // Arrange
     const project = null;
 
@@ -22,7 +23,8 @@ describe('./pods/project/project.mappers', () => {
     // Assert
     expect(result).toEqual(viewModel.createEmptyProject());
   });
-   it('should return expected result but feeding null employees list', () => {
+  
+  it('should return expected result but feeding null employees list', () => {
     //Arrange
     const project: apiModel.Project ={
         id: '1',
@@ -40,13 +42,14 @@ describe('./pods/project/project.mappers', () => {
         isActive: true,
         employees: []
     }
-     // Act
+    // Act
     const result = mapProjectFromApiToVm(project);
 
     // Assert
     expect(result).toEqual(projectResult);
    });
-    it('should return expected result but feeding undefined employees list', () => {
+   
+   it('should return expected result but feeding undefined employees list', () => {
     //Arrange
     const project: apiModel.Project ={
         id: '1',
@@ -70,6 +73,7 @@ describe('./pods/project/project.mappers', () => {
     // Assert
     expect(result).toEqual(projectResult);
    });
+  
    it('should return expected result feeding correct values', () => {
     //Arrange
      const project: apiModel.Project ={
@@ -110,7 +114,7 @@ describe('./pods/project/project.mappers', () => {
           }
          ]
     }
-       // Act
+    // Act
     const result = mapProjectFromApiToVm(project);
 
     // Assert
