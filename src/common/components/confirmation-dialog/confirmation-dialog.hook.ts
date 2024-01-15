@@ -8,6 +8,8 @@ export const useConfirmationDialog = () => {
   return {
     isOpen,
     itemToDelete,
+    setIsOpen,
+    setItemToDelete,
     onAccept: () => {
       setItemToDelete(createEmptyLookup());
     },
