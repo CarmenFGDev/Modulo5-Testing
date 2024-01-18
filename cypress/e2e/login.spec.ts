@@ -1,9 +1,9 @@
-/// <reference types="cypress" />
 describe('Login specs', () => {
   it('visit the login page', () => {
     cy.visit('/');
   });
-   it('should user input has the focus when it clicks on it', () => {
+
+  it('should user input has the focus when it clicks on it', () => {
     // Arrange
     // Act
     cy.visit('/');
@@ -12,6 +12,7 @@ describe('Login specs', () => {
     // Assert
     cy.findByRole('textbox').should('have.focus');
   });
+  
   it('should password input has the focus when it clicks on it', () => {
     // Arrange
 
@@ -22,7 +23,8 @@ describe('Login specs', () => {
     // Assert
     cy.get('input[name="password"]').should('have.focus');
   });
-   it('should show an alert with a message when type invalid credentials', () => {
+  
+  it('should show an alert with a message when type invalid credentials', () => {
     // Arrange
     const user = 'admin';
     const password = '1234';
@@ -41,7 +43,7 @@ describe('Login specs', () => {
     cy.findByText('Usuario y/o password no válidos').should('be.visible');
   });
 
-   it('should navigate to hotels url when type valid credentials', () => {
+  it('should navigate to hotels url when type valid credentials', () => {
     // Arrange
     const user = 'admin';
     const password = 'test';

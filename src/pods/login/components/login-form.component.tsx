@@ -31,8 +31,7 @@ export const LoginFormComponent: React.FunctionComponent<Props> = (props) => {
             label={`${literals.components.fields.password} *`}
             type="password"
             variant="outlined"
-            data-testid="password"
-            
+           
           />
           <Button
             type="submit"
